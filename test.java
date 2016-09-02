@@ -1,48 +1,23 @@
-package 宠物的抽象类;
-abstract class pets{
-public void weight(){
-		System.out.println("宠物的体重:40kg");
-	}
-public void color(){
-		System.out.println("宠物的颜色:七彩的");
-	}
-public abstract void act();
-public void print() {
-	// TODO Auto-generated method stub
-	
-}
-	
-}
-class cat extends pets{
+package 统计字符串中字母出现的个数;
 
-	@Override
-	public void act() {
-		// TODO Auto-generated method stub
-		this.weight();
-		this.color();
-		}
-		public void print(){
-			System.out.println("猫爬树");
-		}
-	}
-	class dog extends pets{
+import java.util.Scanner;
 
-		@Override
-		public void act() {
-			// TODO Auto-generated method stub
-			this.weight();
-			this.color();
-		}
-		public void print(){
-			System.out.println("狗游泳");
-		}
-}
 public class test {
- public static void main(String args[]){
-	 pets pet1=new cat();
-	 pets pet2=new dog();
-	 pet1.print();
-	 pet2.print();
- }
+	public static void main(String[] args) {
+		System.out.println("请输入字符串");
+		Scanner param1=new Scanner(System.in);
+		String letter=param1.next();
+		System.out.println("请输入要查询的字母");
+		Scanner param2=new Scanner(System.in);
+		char cha=param2.next().charAt(0); 
+		int count=0;
+		for(int i=0;i<letter.length();i++){
+		if(cha==letter.charAt(i)){
+		count++;
+		}
+		}
+		System.out.println(cha+"字母出现次数："+count);
+		}
+
 	
 }
