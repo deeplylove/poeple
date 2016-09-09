@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>尴尬的一次作业</title>
+</head>
+<table width="96%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="22%" class="redfont red"><div align="center">今天是：</div></td>
+        <td width="78%" class="redfont red"><script language="javascript">
+    function showTime(){
+       var oDiv = document.all('oDiv');
+       var oDate = new Date();
+       var strTime = oDate.getFullYear() + '年' + eval(oDate.getMonth()+1) + '月' + oDate.getDate() + '日  星期' + '日一二三四五六'.substr(oDate.getDay(),1) + '  ' + oDate.getHours() + ':' + oDate.getMinutes() + ':' + oDate.getSeconds();
+       oDiv.innerHTML = strTime;
+       window.setTimeout('showTime()', 1000);
+    }
+    window.onload = showTime;
+        </script>
+            <div id="oDiv"></div></td>
+      </tr>
+    </table>
+<body>
+</body>
+</html>
